@@ -3,7 +3,6 @@ def promptUserForInput(prompt):
     response = int(input(prompt))
     return response
 
-
 #start car buying menu
 print ("Welcome to Joe's Car Shack")
 
@@ -28,14 +27,13 @@ while (purchaseVehicle == "y"):
         print("Please enter a 1 or 2")
         exit()
 
-    color = int(input("Do you want blue [1] or red [2]?"))
+    color = promptUserForInput("Do you want blue [1] or red [2]?")
     if color == 1:
         colorCost = 100
     elif color == 2:
         colorCost = 200
     else:
         print("Please enter a 1 or 2")
-        # TODO this crashes
         exit()
 
 
@@ -43,4 +41,4 @@ while (purchaseVehicle == "y"):
     total = basePrice + engineCost + colorCost
     print ("The total cost of your vehicle is: " +str(total))
 
-    purchaseVehicle = input("Do you want to purchase another vehicle? y/n").lower()
+    purchaseVehicle = input("Do you want to purchase another vehicle? y/n")
