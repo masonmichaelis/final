@@ -1,9 +1,9 @@
 #start car buying menu
 print ("Welcome to Joe's Car Shack")
 
-userExit = "n"
+purchaseVehicle = "y"
 
-while (userExit == "n"):
+while (purchaseVehicle == "y"):
     vehicleType = int(input("Do you want to buy a car [1] or truck[2]?"))
     if vehicleType == 1:
         basePrice = 1000
@@ -29,6 +29,7 @@ while (userExit == "n"):
         colorCost = 200
     else:
         print("Please enter a 1 or 2")
+        # TODO this crashes
         exit()
 
 
@@ -36,6 +37,6 @@ while (userExit == "n"):
     total = basePrice + engineCost + colorCost
     print ("The total cost of your vehicle is: " +str(total))
 
-    userExit = input("Do you wanat to exit? y/n").lower()
+    purchaseVehicle = input("Do you want to purchase another vehicle? y/n").lower()
 
 
