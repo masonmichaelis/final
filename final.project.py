@@ -42,3 +42,13 @@ while (purchaseVehicle == "y"):
     print ("The total cost of your vehicle is: " +str(total))
 
     purchaseVehicle = input("Do you want to purchase another vehicle? y/n")
+    
+   #file
+    file = open("reciept.txt","w")
+    file.write(str(total))
+    file = open("reciept.txt","r")
+    lines = file.readlines()
+    file.close()
+    for line in lines:
+        print(line)
+
